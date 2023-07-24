@@ -1,0 +1,643 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.setting-modal-content {
+  height: 450px !important;
+}
+.main-nav {
+  padding: 15px 15px;
+}
+.parent-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-logo span {
+  text-transform: capitalize;
+  font-size: 22px;
+  color: #5f6368;
+  font-weight: 500;
+}
+/* time */
+#date {
+  font-weight: 500;
+  color: #5f6368;
+  margin: 0;
+}
+/* action button 1st */
+.date {
+  margin: 0;
+}
+.action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.Question-mark,
+.google-apps,
+.account {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  /* border: 1px solid; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Question-mark:hover {
+  background-color: aliceblue;
+}
+.google-apps:hover{
+  background-color: aliceblue;
+}
+.google-apps i{
+  font-size: 22px;
+  color: #5f6368;
+}
+.Question-mark i {
+  font-size: 22px;
+  color: #5f6368;
+}
+.Question-mark > .dropdown-menu {
+  height: 200px;
+  width: 280px;
+  inset: 35px 0px auto auto !important;
+  text-transform: capitalize;
+}
+.dropdown-item {
+  padding: 0.75rem !important;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: grey;
+}
+
+/* action button 2nd */
+.side-nav-parent {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.side-nav-parent:hover {
+  background-color: aliceblue;
+}
+.side-nav-parent i {
+  font-size: 22px;
+  color: #5f6368;
+}
+
+/* offcanvas starts here */
+.offcanvas-header button {
+  background-color: transparent;
+  border: none;
+}
+.offcanvas-header button i {
+  color: #dddddd;
+}
+.offcanvas {
+  background-color: #1f1f1f;
+}
+#offcanvasRightLabel {
+  color: #dddddd;
+  text-transform: capitalize;
+}
+.img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  margin-top: 10px;
+}
+.content-1-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+.content-1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 25px 0px;
+}
+
+.content-1-icon i {
+  font-size: 19px;
+  color: #1f1f1f;
+}
+.content-1 span {
+  font-size: 18px;
+  color: #dddddd;
+}
+/* offcanvas ends here */
+/* icons are here */
+.audio-parent,
+.video-parent,
+.general-setting {
+  display: flex;
+  gap: 10px;
+  text-transform: capitalize;
+}
+/* action button of setting starts here */
+.drop-down {
+  height: 40px;
+  width: 220px;
+  padding: 10px;
+  border: 1px solid;
+  display: flex;
+  justify-content: start;
+}
+
+.relative-modal-setting {
+  margin-top: 20px;
+  padding: 0;
+  /* position: relative; */
+  /* margin-top: 10px; */
+}
+.btn-close {
+  position: absolute;
+  left: 94%;
+  top: 0;
+}
+.dropdown-menu {
+  height: fit-content !important;
+  transform: translate(0px, 10px) !important;
+  width: 225px !important;
+  inset: 39px 100px auto auto !important;
+}
+.drop-btn {
+  border: 1px solid;
+  padding: 10px 1.75rem !important;
+}
+.btn-check:focus + .btn,
+.btn:focus {
+  box-shadow: none !important;
+}
+.nav-pills .nav-link,
+.nav-pills .show > .nav-link {
+  margin-bottom: 15px !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #3081ea;
+  background-color: #e8f0fe;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.head {
+  margin: 10px 0px;
+  font-size: 32px;
+  padding-left: 20px;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #464a4d;
+}
+/* side icons */
+.side-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.mic-head {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a73e8;
+  color: #fff;
+}
+.mic i {
+  font-size: 22px;
+}
+.adjus-set-col {
+  /* border: 2px solid; */
+  padding: 20px 10px;
+  /* margin-top:80px ; */
+}
+.adjus-set-col h5 {
+  color: #3081ea;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 15px 0px;
+  font-size: 15px;
+}
+.mic span {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #464a4d;
+  font-weight: 600;
+}
+.mic-volume i {
+  font-size: 25px;
+}
+.toggle-content p {
+  color: #464a4d;
+  font-size: 14px;
+}
+.toggle-content h5 {
+  color: #464a4d;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.toggle-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+.toggle-icon i {
+  font-size: 32px;
+}
+.toggle-on {
+  color: #1a73e8;
+}
+.setting {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+.setting:hover {
+  background-color: aliceblue;
+}
+.setting i {
+  font-size: 22px;
+  color: #5f6368;
+}
+/* action button of setting ends here */
+
+/* Action button of google apps starts here */
+.first-layer-div {
+  height: 500px !important;
+  width: 350px !important;
+  border-radius: 20px;
+  background-color: #e9eef6;
+  padding: 10px 0px;
+  overflow-y: scroll;
+}
+.parent-google-apps > .dropdown-menu {
+  transform: translate(0px, 25px) !important;
+}
+.second-layer-div {
+  height: fit-content;
+  width: 95%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 22px;
+  padding-bottom: 30px;
+}
+/* scroll bar starts here */
+.first-layer-div::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+.first-layer-div::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #d8dce3;
+}
+.first-layer-div::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/* scroll bar ends here */
+
+.second-layer-div .cirle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  /* border: 1px solid; */
+  margin: 10px 20px;
+}
+.second-layer-div .cirle img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.content-of-cirlce span {
+  font-weight: 600;
+  color: grey;
+  text-transform: capitalize;
+}
+.second-layer-div .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 15px 15px !important; */
+}
+/* Action button of google apps ends here */
+
+/* Action btn no 4 starts here */
+.btn-improve {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+.btn-improve img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.dropdown-of-account {
+  height: 300px !important;
+  position: absolute !important;
+  top: 40px !important;
+  right: 0 !important;
+  width: 350px !important;
+  /* inset: 40px auto !important; */
+  border-radius: 20px !important;
+  background-color: #e6f0ff;
+  border: none !important;
+}
+/* first div stars here */
+.first-div {
+  height: 150px;
+  width: 335px;
+  margin: 0 auto;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #fff;
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+}
+/* account holder circle img div */
+.ac-holder {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+}
+.ac-holder img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.ac-holder-camera-icon {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  left: 56px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.ac-holder-camera-icon i {
+  color: grey;
+}
+.ac-holder-content h5 {
+  margin: 0;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ac-holder-content p {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: grey;
+}
+/* first div ends here */
+
+/* seocond div starts from here */
+.second-div {
+  height: 50px;
+  width: 335px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #fff;
+  padding: 5px 30px;
+  cursor: pointer;
+}
+.second-div:hover {
+  background-color: #c9deff;
+}
+.ac-holder-content > .btn-primary {
+  color: grey;
+  background-color: #fff;
+  border: 1px solid grey;
+}
+.ac-holder-content > .btn-primary:hover {
+  background-color: #dadce0 !important;
+  color: grey !important;
+  border: 1px solid grey !important;
+}
+.ac-holder-content .btn {
+  padding: 8px !important;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+/*  */
+.add-ac-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.add-icon,
+.sign-icon {
+  font-size: 22px;
+  font-weight: 900;
+  color: grey;
+}
+.add-icon-content,
+.sign-content {
+  font-weight: 600;
+  color: grey;
+  text-transform: capitalize;
+}
+/*  */
+/* seocond div ends from here */
+
+/* footer starts here */
+.sign-out-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 32px;
+  cursor: pointer;
+}
+.sign-out-div:hover {
+  background-color: #c9deff;
+}
+.account-hr {
+  margin: 0 !important;
+}
+.terms {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: grey;
+  padding: 5px 0px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.terms span {
+  /* border-radius:10px; */
+  padding: 5px 5px;
+}
+.terms i {
+  font-size: 22px;
+}
+.terms span:hover {
+  /* background-color: #e6f0ff; */
+  background-color: #c9deff;
+}
+/* footer ends here */
+
+/* progress bar starts from here */
+.parent-progresive-bar {
+  height: 4px;
+  width: 100%;
+  position: relative;
+}
+.child-progresive-bar {
+  height: 100%;
+  /* width: 10%; */
+  background-color: #1a73e8;
+  position: absolute;
+  border-radius: 10px;
+  animation: shinebar 2s infinite ease-in-out;
+}
+
+@keyframes shinebar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* progress bar ends from here */
+/* action btn no 4 ends here*/
+
+/* section 2 css starts here also call as main body */
+
+.content-second-container {
+  width: 500px;
+}
+.content-second-container p {
+  color: #72757a;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.content-second-container h1 {
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.button-left-cols {
+  display: flex;
+  gap: 20px;
+}
+.content-second-container .btn {
+  width: 145px;
+  height: 40px;
+  display: flex;
+  gap: 5px;
+}
+.input-field {
+  display: flex;
+  align-items: center;
+}
+.code-link-input {
+  height: 40px !important;
+  width: 220px !important;
+  border: 1px solid grey;
+  color: grey;
+  position: relative;
+  cursor: auto;
+}
+.input-field i {
+  position: absolute;
+  padding-left: 10px;
+  font-size: 18px;
+}
+.footer-p {
+  text-transform: capitalize;
+}
+.footer-p a {
+  text-decoration: none;
+}
+
+/*  css for container fluid */
+.container-fluid {
+  padding-right: var(--bs-gutter-x, 2.75rem);
+  padding-left: var(--bs-gutter-x, 2.75rem);
+}
+.second-container {
+  padding-top: 50px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+#carouselExampleIndicators {
+  height: 450px;
+}
+.carousel-item img {
+  display: block;
+  margin: 0 auto;
+}
+.carousel-indicators button {
+  height: 8px !important;
+  width: 8px !important;
+  border-radius: 50% !important;
+  background-color: #0d6efd !important;
+}
+.carousel-control-prev {
+  bottom: 135px !important;
+  left: 88px !important;
+}
+.carousel-control-next {
+  bottom: 135px !important;
+  right: 88px !important;
+}
+.ionIcon-arrow {
+  font-size: 25px;
+  color: black;
+}
+.carousel-content {
+  text-align: center;
+  text-transform: capitalize;
+}
+.carousel-content h4 {
+  margin: 0;
+}

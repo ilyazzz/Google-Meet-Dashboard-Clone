@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Meet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- old css link is here -->
+    <!-- <link rel="stylesheet" href="Assignment-8.1.css"> -->
+    <!-- bootstrap icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- ion icon link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- moment js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="main-nav">
+        <div class="parent-nav">
+            <div class="logo-parent">
+                <div class="nav-logo">
+                    <img src="Images/google meet logo.png" alt="">
+                    <span>meet</span>
+                </div>
+            </div>
+            <div class="action-btn-parent">
+                <div class="action-btn">
+                    <p id="date"></p>
+                    <!-- 23:43.Wed,19 Jul -->
+                    <!-- action btn no 1 -->
+                    <div class="Question-mark  dropstart">
+                        <i class="bi bi-question-circle" data-bs-toggle="dropdown"></i>
+                        <ul class="dropdown-menu shadow" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">help</a></li>
+                            <li><a class="dropdown-item" href="#">terms of services</a></li>
+                            <li><a class="dropdown-item" href="#">privacy policy</a></li>
+                            <li><a class="dropdown-item" href="#">teams summary</a></li>
+                        </ul>
+                    </div>
+                    <!-- action btn no 2 -->
+                    <div class="side-nav-parent" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                        <i class="bi bi-chat-left-dots"></i>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 id="offcanvasRightLabel">send feedback to google</h5>
+                                <button type="button" data-bs-dismiss="offcanvas">
+                                    <i class="bi bi-x-lg"></i>
+                                </button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="img-div">
+                                    <img src="Images/Offcanvas.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="content-1">
+                                        <div class="content-1-icon">
+                                            <i class="bi bi-flag"></i>
+                                        </div>
+                                        <span>Report an issue</span>
+                                    </div>
+                                    <div class="content-1">
+                                        <div class="content-1-icon">
+                                            <i class="bi bi-lightbulb"></i>
+                                        </div>
+                                        <span>Suggest an idea</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action button 2.5 -->
+                    <!-- trigger button -->
+                    <button class="setting" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                        <i class="bi bi-gear"></i></button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content setting-modal-content shadow">
+                                <div class="modal-body relative-modal-setting">
+                                    <div class="row">
+                                        <div class="col col-md-3 button-col">
+                                            <div class="head">setting</div>
+                                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                                aria-orientation="vertical">
+                                                <button class="nav-link active" id="v-pills-home-tab"
+                                                    data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
+                                                    role="tab">
+                                                    <div class="audio-parent">
+                                                        <div class="audio-icon">
+                                                            <i class="bi bi-mic"></i>
+                                                        </div>
+                                                        <div class="audio-content">
+                                                            <span>audio</span>
+                                                        </div>
+                                                    </div>
+
+                                                </button>
+                                                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#v-pills-profile" type="button" role="tab">
+                                                    <div class="video-parent">
+                                                        <div class="vidoe-icon">
+                                                            <i class="bi bi-camera-video"></i>
+                                                        </div>
+                                                        <div class="vidoe-content">
+                                                            video
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#v-pills-messages" type="button" role="tab">
+                                                    <div class="general-setting">
+                                                        <div class="setiing-icon"><i class="bi bi-gear"></i></div>
+                                                        <div class="setiing-content">
+                                                            setting
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col col-md-8 adjus-set-col">
+                                            <div class="tab-content" id="v-pills-tabContent">
+                                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                                    aria-labelledby="v-pills-home-tab">
+                                                    <div class="row">
+                                                        <h5>Microphone</h5>
+                                                        <div class="col col-md-8">
+                                                            <div class="dropdown">
+                                                                <button class="btn dropdown-toggle drop-btn"
+                                                                    type="button" id="dropdownMenuButton1"
+                                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    default-microphone array
+                                                                </button>
+                                                                <ul class="dropdown-menu"
+                                                                    aria-labelledby="dropdownMenuButton1">
+                                                                    <li><a class="dropdown-item"
+                                                                            href="#">default-microphone array</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Microphone
+                                                                            array</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col col-md-4">
+                                                            <div class="side-icons">
+                                                                <div class="mic">
+                                                                    <i class="bi bi-mic"></i>
+                                                                </div>
+                                                                <div class="mic-head">
+                                                                    <i class="bi bi-three-dots"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <h5>speakers</h5>
+                                                        <div class="col col-md-8">
+                                                            <div class="dropdown">
+                                                                <button class="btn dropdown-toggle drop-btn"
+                                                                    type="button" id="dropdownMenuButton1"
+                                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    default-head-phone array
+                                                                </button>
+                                                                <ul class="dropdown-menu"
+                                                                    aria-labelledby="dropdownMenuButton1">
+                                                                    <li><a class="dropdown-item"
+                                                                            href="#">default-speaker array</a></li>
+                                                                    <li><a class="dropdown-item" href="#">head phone
+                                                                        </a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col col-md-4">
+                                                            <div class="side-icons">
+                                                                <div class="mic-volume">
+                                                                    <i class="bi bi-volume-down"></i>
+                                                                </div>
+                                                                <div class="mic">
+                                                                    <span>test</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                                    aria-labelledby="v-pills-profile-tab">
+                                                    <div class="row">
+                                                        <h5>camera</h5>
+                                                        <div class="col col-md-8">
+                                                            <div class="dropdown">
+                                                                <button class="btn dropdown-toggle drop-btn"
+                                                                    type="button" id="dropdownMenuButton1"
+                                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    Integrated camera array
+                                                                </button>
+                                                                <ul class="dropdown-menu"
+                                                                    aria-labelledby="dropdownMenuButton1">
+                                                                    <li>
+                                                                        <a class="dropdown-item"
+                                                                            href="#">default-Integrated camera</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                                    aria-labelledby="v-pills-messages-tab">
+                                                    <div class="row">
+                                                        <div class="col col-md-8 toggle-content">
+                                                            <h5>Send additional diagonostic info to google</h5>
+                                                            <p>Google uses these system logs to make meet better for
+                                                                everyone</p>
+                                                            <h5>Leave empty calls</h5>
+                                                            <p>Remove you from a call after a few minutes if no one else
+                                                                joins</p>
+                                                        </div>
+                                                        <div class="col col-md-4 toggle-icon">
+                                                            <i class="bi bi-toggle-on toggle-on"></i>
+                                                            <i class="bi bi-toggle-off"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- close button coloum is here -->
+                                        <div class="col col-md-1">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- action btn no 3 -->
+                    <div class="parent-google-apps">
+                        <div class="google-apps" role="button" id="dropdownMenuButton3" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <!-- Button trigger google apps drop down-->
+                            <i class="bi bi-menu-up"></i>
+                        </div>
+                        <div class="first-layer-div dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                            <div class="second-layer-div">
+                                <div class="row row-cols-3 ">
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/google icon.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>search</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/g-maps.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>maps</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-gmail-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>gmail</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-calendar-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>dates</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-cloud-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>cloud</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-drive-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>drive</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-photos-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>photos</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-podcasts-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>podcast</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/google icon.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>search</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/g-maps.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>maps</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-gmail-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>gmail</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-calendar-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>dates</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-cloud-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>cloud</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-drive-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>drive</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-photos-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>photos</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-podcasts-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>podcast</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/google icon.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>search</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/g-maps.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>maps</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-gmail-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>gmail</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-calendar-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>dates</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-cloud-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>cloud</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-drive-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>drive</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-photos-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>photos</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="cirle">
+                                            <img src="Images/icons8-google-podcasts-48.png" alt="">
+                                        </div>
+                                        <div class="content-of-cirlce">
+                                            <span>podcast</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <button class="btn btn-primary">More from google</button> -->
+                        </div>
+                    </div>
+
+
+
+                    <!-- action btn no 4 your google a/c-->
+                    <div class="dropdown">
+                        <button class="btn-improve" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="Images/pillu.jpg" alt="">
+                        </button>
+                        <ul class="dropdown-menu shadow dropdown-of-account" aria-labelledby="dropdownMenu2">
+                            <div class="first-div">
+                                <div class="ac-holder">
+                                    <img src="Images/pillu.jpg" alt="">
+                                </div>
+                                <div class="ac-holder-camera-icon"><i class="bi bi-camera"></i></div>
+                                <div class="ac-holder-content">
+                                    <h5>ilyaz sayyed</h5>
+                                    <p>ilyaz.3108@gmail.com</p>
+                                    <button class="btn btn-primary">manage you google Account</button>
+                                </div>
+                            </div>
+                            <div class="parent-progresive-bar">
+                                <div class="child-progresive-bar"></div>
+                            </div>
+                            <div class="second-div">
+                                <div class="add-ac-div">
+                                    <div class="add-icon">
+                                        <i class="bi bi-person-plus"></i>
+                                    </div>
+                                    <div class="add-icon-content">
+                                        <span>add another account</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sign-out-div">
+                                <div class="sign-icon">
+                                    <i class="bi bi-box-arrow-left"></i>
+                                </div>
+                                <div class="sign-content">
+                                    <span>sign out</span>
+                                </div>
+                            </div>
+                            <hr class="account-hr">
+                            <div class="terms">
+                                <span>privacy policy</span><i class="bi bi-dot"></i><span>terms of services</span>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <section class="sec-2">
+        <div class="container-fluid second-container">
+            <div class="row">
+                <div class="col col-md-6">
+                    <div class="content-second-container">
+                        <h1>Premium video meetings. Now free for everyone.</h3>
+                            <p>We re-engineered the service that we built for secure business meetings, Google Meet, to
+                                make it free and available for all.</p>
+                            <div class="button-left-cols">
+                                <button class="btn btn-primary">
+                                    <i class="bi bi-camera-video"></i>
+                                    New Metting
+                                </button>
+                                <div class="input-field">
+                                    <i class="bi bi-keyboard" style="position: absolute;"></i>
+                                    <input type="text" style="position: relative;" class="btn code-link-input"
+                                        placeholder="Enter a code or link">
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="footer-p"><a href="#">Learn More</a> about google meet</p>
+                    </div>
+                </div>
+                <div class="col col-md-6">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Images/meet-1.svg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/meet-2.svg" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/meet-3.svg" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-content">
+                            <h4>Your meeting is safe</h4>
+                            <p>No one can join a meeting unless you invited or admitted by the host</p>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <ion-icon name="chevron-back-outline" class="ionIcon-arrow"></ion-icon>
+                            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <ion-icon name="chevron-forward-outline" class="ionIcon-arrow"></ion-icon>
+                            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+        function currenttime() {
+            let Timenow = moment().format('MMMM Do YYYY, h:mm:ss a')
+            document.getElementById("date").innerHTML = Timenow
+            setTimeout(currenttime, 1000)
+        }
+        currenttime()
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
