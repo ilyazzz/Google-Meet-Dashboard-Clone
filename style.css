@@ -570,22 +570,25 @@
   gap: 5px;
 }
 .input-field {
-  display: flex;
-  align-items: center;
-}
-.code-link-input {
-  height: 40px !important;
-  width: 220px !important;
+  height: 40px;
+  width: 220px;
+  border-radius: 5px;
   border: 1px solid grey;
-  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  cursor: auto;
 }
-.input-field i {
-  position: absolute;
-  padding-left: 10px;
-  font-size: 18px;
+.input-field:focus-within{
+  border:2px solid #1A73E8;
 }
+.input-field input{
+border: none !important;
+outline: none !important;
+}
+
+
+
 .footer-p {
   text-transform: capitalize;
 }
