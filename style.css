@@ -302,32 +302,27 @@
   border-radius: 20px;
   background-color: #e9eef6;
   padding: 10px 0px;
-  overflow-y: scroll;
 }
 .parent-google-apps > .dropdown-menu {
   transform: translate(0px, 25px) !important;
 }
 .second-layer-div {
-  height: fit-content;
+  height: 100%;
   width: 95%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
   margin: 0 auto;
   background-color: #fff;
   padding: 22px;
   padding-bottom: 30px;
+  overflow-y: scroll;
 }
 /* scroll bar starts here */
-.first-layer-div::-webkit-scrollbar {
-  width: 8px;
-  background-color: transparent;
+.second-layer-div::-webkit-scrollbar {
+  width: 7px;
 }
-.first-layer-div::-webkit-scrollbar-thumb {
+.second-layer-div::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #d8dce3;
-}
-.first-layer-div::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: #C9CDD3;
 }
 /* scroll bar ends here */
 
